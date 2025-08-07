@@ -1,7 +1,9 @@
+import packageJson from "../../../package.json" assert { type: "json" };
+const { version, name } = packageJson;
 module.exports = {
   apps: [
     {
-      name: "backend-example",
+      name: `${name}-${version}`,
       script: "npm",
       args: "start",
       instances: 1,
